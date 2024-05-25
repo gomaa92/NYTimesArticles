@@ -62,7 +62,7 @@ fun ArticleDetailBottomSheet(article: ArticleUiEntity, onCloseClicked: (() -> Un
         }
         Image(
             painter = rememberAsyncImagePainter(article.largeThumbnail),
-            contentDescription = null,
+            contentDescription = stringResource(id = R.string.image_content_desc),
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .fillMaxWidth()

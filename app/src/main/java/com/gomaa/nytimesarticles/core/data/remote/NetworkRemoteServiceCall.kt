@@ -1,6 +1,6 @@
 package com.gomaa.nytimesarticles.core.data.remote
 
-import android.util.Log
+import android.accounts.NetworkErrorException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
@@ -26,7 +26,6 @@ interface NetworkRemoteServiceCall {
                 Resource.Success(response)
             } catch (throwable: Exception) {
                 // check why the api calls failed?
-                Log.e("fetchPopularArticles", "fetchPopularArticles333: $throwable", )
                 Timber.e("Api failed due to exception  --> $throwable")
                 throwable.fromExceptionToRemoteError()
             }

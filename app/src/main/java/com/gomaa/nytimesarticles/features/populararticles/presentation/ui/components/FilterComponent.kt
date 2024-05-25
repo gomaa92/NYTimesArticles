@@ -11,18 +11,23 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.FilterComponentConstants.FILTER_ROW_TEST_TAG
 import com.gomaa.nytimesarticles.features.populararticles.presentation.utils.FilterOption
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FilterChipRow(
     filterOptions: List<FilterOption>,
-    onFilterSelected: (Int) -> Unit
+    onFilterSelected: (Int) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = Modifier.padding(16.dp),
+        modifier = modifier
+            .padding(16.dp)
+            .testTag(FILTER_ROW_TEST_TAG),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         filterOptions.forEach { filter ->
@@ -40,4 +45,8 @@ fun FilterChipRow(
             )
         }
     }
+}
+
+object FilterComponentConstants {
+    const val FILTER_ROW_TEST_TAG = "FILTER_ROW_TEST_TAG"
 }

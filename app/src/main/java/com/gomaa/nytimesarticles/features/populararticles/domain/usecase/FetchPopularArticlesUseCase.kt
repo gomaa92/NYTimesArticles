@@ -6,7 +6,7 @@ import com.gomaa.nytimesarticles.features.populararticles.data.model.ArticlesRes
 import com.gomaa.nytimesarticles.features.populararticles.domain.repository.PopularArticlesRepository
 import javax.inject.Inject
 
-class FetchPopularArticlesUseCase @Inject constructor(private val repository: PopularArticlesRepository) :
+open class FetchPopularArticlesUseCase @Inject constructor(private val repository: PopularArticlesRepository) :
     SuspendableUseCase<Int, Resource<ArticlesResponse>> {
     override suspend fun execute(input: Int): Resource<ArticlesResponse> =
         repository.fetchPopularArticles(input)

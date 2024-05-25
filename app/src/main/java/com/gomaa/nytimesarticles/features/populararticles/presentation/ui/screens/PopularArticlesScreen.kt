@@ -89,10 +89,12 @@ fun PopularArticlesScreen(
                                 option.copy(isSelected = option.period == period)
                             }
                             viewModel.dispatch(PopularArticlesEvent.FetchPopularArticles(period))
-                        }
+                        },
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    ArticlesList(articles = articles) { item ->
+                    ArticlesList(
+                        articles = articles,
+                    ) { item ->
                         selectedItem = item
                         coroutineScope.launch {
                             scaffoldState.bottomSheetState.expand()

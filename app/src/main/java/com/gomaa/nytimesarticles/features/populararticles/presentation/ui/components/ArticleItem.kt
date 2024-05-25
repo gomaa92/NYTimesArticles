@@ -21,15 +21,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import com.gomaa.nytimesarticles.R
 import com.gomaa.nytimesarticles.features.populararticles.presentation.model.ArticleUiEntity
+import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.ArticlesListConstants.ARTICLES_LIST_TEST_TAG
 import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.NYText
 import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.NYTextStyle
 
 @Composable
-fun ArticlesList(articles: List<ArticleUiEntity>, onItemClick: (ArticleUiEntity) -> Unit) {
-    LazyColumn(state = rememberLazyListState(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+fun ArticlesList(
+    articles: List<ArticleUiEntity>,
+    modifier: Modifier = Modifier,
+    onItemClick: (ArticleUiEntity) -> Unit,
+) {
+    LazyColumn(
+        state = rememberLazyListState(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = modifier.testTag(ARTICLES_LIST_TEST_TAG)
+    ) {
         items(articles) {
             ArticleItem(it, onItemClick)
         }
@@ -49,7 +61,7 @@ fun ArticleItem(
             Box(modifier = Modifier.fillMaxWidth()) {
                 Image(
                     painter = rememberAsyncImagePainter(item.largeThumbnail),
-                    contentDescription = null,
+                    contentDescription = stringResource(id = R.string.image_content_desc),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -84,3 +96,8 @@ fun ArticleItem(
         }
     }
 }
+
+object ArticlesListConstants {
+    const val ARTICLES_LIST_TEST_TAG = "ARTICLES_LIST_TEST_TAG"
+}
+
