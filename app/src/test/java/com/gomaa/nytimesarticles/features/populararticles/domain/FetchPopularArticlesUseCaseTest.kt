@@ -3,9 +3,8 @@ package com.gomaa.nytimesarticles.features.populararticles.domain
 import com.gomaa.core.remote.RemoteError
 import com.gomaa.core.remote.Resource
 import com.gomaa.nyarticles.data.model.Article
-import com.gomaa.nyarticles.data.model.ArticlesResponse
-import com.gomaa.nytimesarticles.features.populararticles.domain.repository.PopularArticlesRepository
-import com.gomaa.nytimesarticles.features.populararticles.domain.usecase.FetchPopularArticlesUseCase
+import com.gomaa.nyarticles.domain.repository.PopularArticlesRepository
+import com.gomaa.nyarticles.domain.usecase.FetchPopularArticlesUseCase
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -30,7 +29,7 @@ class FetchPopularArticlesUseCaseTest {
     fun `fetch popular articles success`() = runBlocking {
         val period = 7
         val articles = listOf(
-            com.gomaa.nyarticles.data.model.Article(
+            Article(
                 id = 1,
                 media = null,
                 publishedDate = "date",
@@ -44,7 +43,7 @@ class FetchPopularArticlesUseCaseTest {
                 url = "url",
                 byline = "byline"
             ),
-            com.gomaa.nyarticles.data.model.Article(
+            Article(
                 id = 1,
                 media = null,
                 publishedDate = "date",
@@ -83,7 +82,7 @@ class FetchPopularArticlesUseCaseTest {
     fun `fetch popular articles error`() = runBlocking {
         val period = 7
         val articles = listOf(
-            com.gomaa.nyarticles.data.model.Article(
+            Article(
                 id = 1,
                 media = null,
                 publishedDate = "date",
@@ -97,7 +96,7 @@ class FetchPopularArticlesUseCaseTest {
                 url = "url",
                 byline = "byline"
             ),
-            com.gomaa.nyarticles.data.model.Article(
+            Article(
                 id = 1,
                 media = null,
                 publishedDate = "date",

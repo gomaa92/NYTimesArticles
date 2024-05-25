@@ -3,6 +3,7 @@ package com.gomaa.nyarticles.presentation.mapper
 import com.gomaa.nyarticles.data.model.Article
 import com.gomaa.nyarticles.presentation.model.ArticleUiEntity
 import org.jetbrains.annotations.VisibleForTesting
+import java.time.Clock
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
@@ -28,18 +29,17 @@ object ArticlesUIMapper {
     }
 
     @VisibleForTesting
-    fun calculateDaysBetween(publishedDate: String): String {
+    fun calculateDaysBetween(publishedDate: String, clock: Clock = Clock.systemDefaultZone()): String {
         val formatter = DateTimeFormatter.ISO_LOCAL_DATE
 
         val givenDate = LocalDate.parse(publishedDate, formatter)
-
-        val currentDate = LocalDate.now()
+        val currentDate = LocalDate.now(clock)
 
         val daysDifference = ChronoUnit.DAYS.between(givenDate, currentDate)
 
         return when {
             daysDifference > 0 -> "$daysDifference day(s) ago"
-            daysDifference < 0 -> "${-daysDifference} day(s) from now" //This case shouldn't be called ever
+            daysDifference < 0 -> "${-daysDifference} day(s) from now" // This case shouldn't be called ever
             else -> "Today"
         }
     }

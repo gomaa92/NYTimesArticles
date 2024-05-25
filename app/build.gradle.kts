@@ -32,13 +32,9 @@ android {
             isMinifyEnabled = false
             isDebuggable = true
             isTestCoverageEnabled = true
-            buildConfigField("String", "BASE_URL", "\"https://api.nytimes.com/\"")
-            buildConfigField("String", "API_KEY", "\"QlYGyjXK7GDLlarIFTAHXSjAocG0nmML\"")
         }
         release {
             isMinifyEnabled = false
-            buildConfigField("String", "BASE_URL", "\"https://api.nytimes.com/\"")
-            buildConfigField("String", "API_KEY", "\"QlYGyjXK7GDLlarIFTAHXSjAocG0nmML\"")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

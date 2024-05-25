@@ -6,9 +6,9 @@ import com.gomaa.nyarticles.data.model.Article
 import com.gomaa.nyarticles.data.model.ArticlesResponse
 import com.gomaa.nyarticles.data.model.Media
 import com.gomaa.nyarticles.data.model.MediaMetadata
-import com.gomaa.nytimesarticles.features.populararticles.data.repository.PopularArticlesRepositoryImpl
-import com.gomaa.nytimesarticles.features.populararticles.data.service.MostPopularArticlesService
-import com.gomaa.nytimesarticles.features.populararticles.domain.repository.PopularArticlesRepository
+import com.gomaa.nyarticles.data.repository.PopularArticlesRepositoryImpl
+import com.gomaa.nyarticles.data.service.MostPopularArticlesService
+import com.gomaa.nyarticles.domain.repository.PopularArticlesRepository
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert
 import org.junit.Before
@@ -38,10 +38,10 @@ class PopularArticlesRepositoryImplTest {
     @Test
     fun getArticleListReturnSuccess() {
         runBlocking {
-            val response = com.gomaa.nyarticles.data.model.ArticlesResponse(
+            val response = ArticlesResponse(
                 numResults = 1,
                 articles = listOf(
-                    com.gomaa.nyarticles.data.model.Article(
+                    Article(
                         id = 1,
                         publishedDate = "text",
                         section = "text",
@@ -54,13 +54,13 @@ class PopularArticlesRepositoryImplTest {
                         uri = "text",
                         byline = "text",
                         media = listOf(
-                            com.gomaa.nyarticles.data.model.Media(
+                            Media(
                                 caption = "text",
                                 copyright = "text",
                                 subtype = "text",
                                 type = "text",
                                 mediaMetadata = listOf(
-                                    com.gomaa.nyarticles.data.model.MediaMetadata(
+                                    MediaMetadata(
                                         format = "text",
                                         height = 1,
                                         width = 1,
@@ -99,7 +99,7 @@ class PopularArticlesRepositoryImplTest {
     @Test
     fun getArticleListReturnServerError() {
         runBlocking {
-            val errorResponse = Response.error<com.gomaa.nyarticles.data.model.ArticlesResponse>(
+            val errorResponse = Response.error<ArticlesResponse>(
                 404,
                 okhttp3.ResponseBody.create(null, "Not Found")
             )

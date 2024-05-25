@@ -14,7 +14,7 @@ class EmptyStateFullPageTest {
     @Test
     fun verifyEmptyStateFullPageIsDisplayed() {
         composeTestRule.setContent {
-            com.gomaa.design_system.EmptyStateFullPage(
+            EmptyStateFullPage(
                 headerText = "header",
                 descriptionText = "description"
             )

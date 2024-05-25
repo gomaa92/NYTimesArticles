@@ -16,8 +16,8 @@ class IllustrationTest {
     @Test
     fun verifyEmptyStateFullPageIsDisplayed() {
         composeTestRule.setContent {
-            com.gomaa.design_system.Illustration(
-                illustration = com.gomaa.design_system.Illustrations.Error,
+            Illustration(
+                illustration = Illustrations.Error,
                 contentDescription = "contentDes"
             )
 
