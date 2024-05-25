@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components
+package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -12,11 +12,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.gomaa.nytimesarticles.R
 
@@ -45,7 +44,7 @@ fun Loader() {
         modifier = Modifier
             .padding(16.dp)
             .size(56.dp)
-            // .semantics { drawableId = R.drawable.loader }
+            .semantics { drawableId = R.drawable.loader }
             .graphicsLayer {
                 rotationZ = rotationValue
             }

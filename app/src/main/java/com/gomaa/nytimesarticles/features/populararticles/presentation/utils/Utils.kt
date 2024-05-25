@@ -11,7 +11,6 @@ fun openInBrowser(url: String, context: Context) {
 }
 
 data class FilterOption(val title: Int, val period: Int, var isSelected: Boolean)
-
 fun initializeFilterOptions(): List<FilterOption> {
     return listOf(
         FilterOption(title = R.string.last_day, period = 1, isSelected = true),

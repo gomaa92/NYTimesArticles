@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components
+package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
 
 import androidx.compose.material3.Icon as MaterialIcon
 import androidx.compose.runtime.Composable
@@ -6,7 +6,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.semantics
-import com.gomaa.nytimesarticles.ui.theme.drawableId
 
 /**
  * Illustrations are used in our empty states, errors, and celebrations to add delight and clarity.

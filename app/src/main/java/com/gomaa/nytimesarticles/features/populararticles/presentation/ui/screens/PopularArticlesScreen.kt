@@ -1,5 +1,6 @@
 package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -38,10 +39,8 @@ import kotlinx.coroutines.launch
 fun PopularArticlesScreen(
     viewModel: PopularArticlesViewModel = hiltViewModel()
 ) {
-
+    val scope = rememberCoroutineScope()
     var filterOptions by remember { mutableStateOf(initializeFilterOptions()) }
-
-
     LaunchedEffect(true) {
         viewModel.dispatch(PopularArticlesEvent.FetchPopularArticles(1))
     }
@@ -52,16 +51,25 @@ fun PopularArticlesScreen(
 
     val scaffoldState = rememberBottomSheetScaffoldState(
         bottomSheetState = rememberStandardBottomSheetState(
-            skipHiddenState = true
+            skipHiddenState = false
         )
     )
     val coroutineScope = rememberCoroutineScope()
     var selectedItem by remember { mutableStateOf<ArticleUiEntity?>(null) }
 
+    BackHandler(enabled = scaffoldState.bottomSheetState.isVisible) {
+        coroutineScope.launch {
+            scaffoldState.bottomSheetState.hide()
+        }
+    }
     BottomSheetScaffold(
         scaffoldState = scaffoldState,
         sheetContent = {
-            selectedItem?.let { ArticleDetailBottomSheet(article = it) }
+            selectedItem?.let {
+                ArticleDetailBottomSheet(article = it) {
+                    scope.launch { scaffoldState.bottomSheetState.hide() }
+                }
+            }
         },
         sheetPeekHeight = 0.dp
     ) {
@@ -99,7 +107,18 @@ fun PopularArticlesScreen(
             }
 
             isError -> {
-                ErrorStateUi()
+                ErrorStateUi(
+                    ctaButtonOnClick = {
+                        filterOptions = filterOptions.map { option ->
+                            option.copy(isSelected = option.period == 1)
+                        }
+                        viewModel.dispatch(
+                            PopularArticlesEvent.FetchPopularArticles(
+                                1
+                            )
+                        )
+                    }
+                )
             }
         }
     }

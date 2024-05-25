@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.Loader
+import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Loader
 
 @Composable
 internal fun CoinLoader() {

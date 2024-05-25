@@ -6,6 +6,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.gomaa.nytimesarticles.R
+import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.EmptyStateFullPage
+import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Illustrations
 
 @Composable
 internal fun EmptyStateUi() {

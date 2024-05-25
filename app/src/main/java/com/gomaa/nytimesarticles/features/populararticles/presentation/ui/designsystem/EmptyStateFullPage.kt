@@ -1,9 +1,12 @@
-package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components
+package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -14,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.gomaa.nytimesarticles.ui.theme.NYTextStyle
 
 /**
  * Full page empty state with an illustration, header, description, and CTA button.
@@ -35,6 +37,8 @@ fun EmptyStateFullPage(
     modifier: Modifier = Modifier,
     illustration: Illustrations? = null,
     contentDescription: String? = null,
+    ctaButtonText: String? = null,
+    ctaButtonOnClick: (() -> Unit)? = null
 ) {
     Box(
         modifier = modifier
@@ -74,8 +78,25 @@ fun EmptyStateFullPage(
                     nyTextStyle = NYTextStyle.BodyLarge,
                     textAlign = TextAlign.Center,
                     maxLines = 3,
-                    color = MaterialTheme.colorScheme.onTertiary,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.padding(top = 4.dp)
+                )
+            }
+            ctaButtonText?.let {
+                if (descriptionText != null) {
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+                NYText(
+                    text = ctaButtonText,
+                    nyTextStyle = NYTextStyle.BodyLarge,
+                    textAlign = TextAlign.Center,
+                    maxLines = 3,
+                    color = MaterialTheme.colorScheme.inversePrimary,
+                    modifier = Modifier
+                        .padding(top = 4.dp)
+                        .clickable {
+                            ctaButtonOnClick?.invoke()
+                        }
                 )
             }
         }

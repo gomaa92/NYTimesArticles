@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components
+package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -10,7 +10,6 @@ import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
-import com.gomaa.nytimesarticles.ui.theme.NYTextStyle
 import androidx.compose.material3.LocalContentColor as MaterialLocalContentColor
 
 @Composable

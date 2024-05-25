@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components
+package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
 
 import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Stable
@@ -9,10 +9,10 @@ sealed interface Illustrations {
     val res: Int
     companion object {
         val Search: Illustrations
-            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.Search
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Search
 
         val Error: Illustrations
-            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.Error
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Error
     }
 }
 

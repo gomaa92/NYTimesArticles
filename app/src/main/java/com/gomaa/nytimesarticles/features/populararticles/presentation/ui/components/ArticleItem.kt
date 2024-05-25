@@ -24,7 +24,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.gomaa.nytimesarticles.features.populararticles.presentation.model.ArticleUiEntity
-import com.gomaa.nytimesarticles.ui.theme.NYTextStyle
+import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.NYText
+import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.NYTextStyle
 
 @Composable
 fun ArticlesList(articles: List<ArticleUiEntity>, onItemClick: (ArticleUiEntity) -> Unit) {

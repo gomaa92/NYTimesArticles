@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.ui.theme
+package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
 
 import androidx.compose.ui.semantics.SemanticsPropertyKey
 import androidx.compose.ui.semantics.SemanticsPropertyReceiver

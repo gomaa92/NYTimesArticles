@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.ui.theme
+package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
@@ -117,33 +117,33 @@ sealed interface NYTextStyle {
 
         @Stable
         val Title: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.Title
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Title
         @Stable
         val HeaderLarge: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.HeaderLarge
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.HeaderLarge
         @Stable
         val HeaderSmall: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.HeaderSmall
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.HeaderSmall
         @Stable
         val BodyLarge: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.BodyLarge
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.BodyLarge
         @Stable
         val BodySmall: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.BodySmall
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.BodySmall
         @Stable
         val LabelLarge: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.LabelLarge
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.LabelLarge
         @Stable
         val LabelMedium: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.LabelMedium
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.LabelMedium
         @Stable
         val LabelSmall: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.LabelSmall
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.LabelSmall
         @Stable
         val Overline: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.Overline
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Overline
         @Stable
         val Caption: NYTextStyle
-            get() = com.gomaa.nytimesarticles.ui.theme.Caption
+            get() = com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Caption
     }
 }

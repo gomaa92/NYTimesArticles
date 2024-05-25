@@ -4,8 +4,7 @@ import com.gomaa.nytimesarticles.core.data.remote.Resource
 import com.gomaa.nytimesarticles.core.presentation.BaseViewModel
 import com.gomaa.nytimesarticles.core.presentation.UiEffect
 import com.gomaa.nytimesarticles.features.populararticles.domain.usecase.FetchPopularArticlesUseCase
-import com.gomaa.nytimesarticles.features.populararticles.presentation.mapper.ArticlesDomainMapper.mapDataArticlesToUiArticles
-import com.gomaa.nytimesarticles.features.populararticles.presentation.utils.initializeFilterOptions
+import com.gomaa.nytimesarticles.features.populararticles.presentation.mapper.ArticlesUIMapper.mapDataArticlesToUiArticles
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -30,7 +29,7 @@ class PopularArticlesViewModel @Inject constructor(private val useCase: FetchPop
         }
         when (val result = useCase.execute(input = period)) {
             is Resource.Error -> setState {
-                currentState.copy(isLoading = false, isError = true)
+                currentState.copy(isLoading = false, isError = true, articles = emptyList())
             }
 
             is Resource.Success -> {
