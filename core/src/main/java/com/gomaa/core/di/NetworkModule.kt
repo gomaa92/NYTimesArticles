@@ -1,6 +1,6 @@
-package com.gomaa.nytimesarticles.core.di
+package com.gomaa.core.di
 
-import com.gomaa.nytimesarticles.BuildConfig
+import com.gomaa.core.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module

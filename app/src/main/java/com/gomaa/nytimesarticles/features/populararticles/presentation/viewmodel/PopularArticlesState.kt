@@ -1,6 +1,6 @@
 package com.gomaa.nytimesarticles.features.populararticles.presentation.viewmodel
 
-import com.gomaa.nytimesarticles.core.presentation.UiState
+import com.gomaa.core.presentation.UiState
 import com.gomaa.nytimesarticles.features.populararticles.presentation.model.ArticleUiEntity
 
 data class PopularArticlesState(

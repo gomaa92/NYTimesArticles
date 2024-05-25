@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.core.data.remote
+package com.gomaa.core.remote
 
 import android.accounts.NetworkErrorException
 import kotlinx.coroutines.Dispatchers

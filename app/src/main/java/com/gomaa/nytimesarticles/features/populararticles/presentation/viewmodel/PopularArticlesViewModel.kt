@@ -1,8 +1,8 @@
 package com.gomaa.nytimesarticles.features.populararticles.presentation.viewmodel
 
-import com.gomaa.nytimesarticles.core.data.remote.Resource
-import com.gomaa.nytimesarticles.core.presentation.BaseViewModel
-import com.gomaa.nytimesarticles.core.presentation.UiEffect
+import com.gomaa.core.remote.Resource
+import com.gomaa.core.presentation.BaseViewModel
+import com.gomaa.core.presentation.UiEffect
 import com.gomaa.nytimesarticles.features.populararticles.domain.usecase.FetchPopularArticlesUseCase
 import com.gomaa.nytimesarticles.features.populararticles.presentation.mapper.ArticlesUIMapper.mapDataArticlesToUiArticles
 import dagger.hilt.android.lifecycle.HiltViewModel

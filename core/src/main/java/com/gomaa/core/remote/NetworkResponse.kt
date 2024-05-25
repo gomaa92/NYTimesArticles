@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.core.data.remote
+package com.gomaa.core.remote
 
 sealed class Resource<T>(
     val _data: T? = null,

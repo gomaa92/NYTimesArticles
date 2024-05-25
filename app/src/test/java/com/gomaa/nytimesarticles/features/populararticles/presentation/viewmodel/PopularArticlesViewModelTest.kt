@@ -1,7 +1,7 @@
 package com.gomaa.nytimesarticles.features.populararticles.presentation.viewmodel
 
-import com.gomaa.nytimesarticles.core.data.remote.RemoteError
-import com.gomaa.nytimesarticles.core.data.remote.Resource
+import com.gomaa.core.remote.RemoteError
+import com.gomaa.core.remote.Resource
 import com.gomaa.nytimesarticles.features.populararticles.data.model.Article
 import com.gomaa.nytimesarticles.features.populararticles.data.model.ArticlesResponse
 import com.gomaa.nytimesarticles.features.populararticles.domain.usecase.FetchPopularArticlesUseCase

@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.core.presentation
+package com.gomaa.core.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

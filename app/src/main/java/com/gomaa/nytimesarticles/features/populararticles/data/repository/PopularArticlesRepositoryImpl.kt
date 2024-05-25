@@ -1,7 +1,7 @@
 package com.gomaa.nytimesarticles.features.populararticles.data.repository
 
-import com.gomaa.nytimesarticles.core.data.remote.NetworkRemoteServiceCall
-import com.gomaa.nytimesarticles.core.data.remote.Resource
+import com.gomaa.core.remote.NetworkRemoteServiceCall
+import com.gomaa.core.remote.Resource
 import com.gomaa.nytimesarticles.features.populararticles.data.model.ArticlesResponse
 import com.gomaa.nytimesarticles.features.populararticles.data.service.MostPopularArticlesService
 import com.gomaa.nytimesarticles.features.populararticles.domain.repository.PopularArticlesRepository

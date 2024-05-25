@@ -1,7 +1,7 @@
 package com.gomaa.nytimesarticles.features.populararticles.data.service
 
 import com.gomaa.nytimesarticles.BuildConfig
-import com.gomaa.nytimesarticles.core.data.remote.EndPointConfig.FETCH_POPULAR_ARTICLES
+import com.gomaa.core.remote.EndPointConfig.FETCH_POPULAR_ARTICLES
 import com.gomaa.nytimesarticles.features.populararticles.data.model.ArticlesResponse
 import retrofit2.http.GET
 import retrofit2.http.Path

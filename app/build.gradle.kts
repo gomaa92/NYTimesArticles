@@ -65,14 +65,14 @@ android {
     }
     configurations.all {
         resolutionStrategy {
-            force ("androidx.test.ext:junit:1.1.3")
-            force ("androidx.test.espresso:espresso-core:3.4.0")
+            force("androidx.test.ext:junit:1.1.3")
+            force("androidx.test.espresso:espresso-core:3.4.0")
         }
     }
 }
 
 dependencies {
-
+    implementation(project(":core"))
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
     implementation("androidx.activity:activity-compose:1.9.0")
@@ -99,7 +99,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-test-junit4-android:1.6.7")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
     kapt("com.google.dagger:hilt-compiler:2.48.1")
-    implementation( "androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     implementation("io.coil-kt:coil-compose:2.6.0")
     implementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
@@ -113,7 +113,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.6.7")
-    androidTestImplementation ("androidx.arch.core:core-testing:2.2.0")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.7")
+    androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
