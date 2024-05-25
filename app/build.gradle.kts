@@ -31,6 +31,7 @@ android {
         debug {
             isMinifyEnabled = false
             isDebuggable = true
+            isTestCoverageEnabled = true
             buildConfigField("String", "BASE_URL", "\"https://api.nytimes.com/\"")
             buildConfigField("String", "API_KEY", "\"QlYGyjXK7GDLlarIFTAHXSjAocG0nmML\"")
         }
