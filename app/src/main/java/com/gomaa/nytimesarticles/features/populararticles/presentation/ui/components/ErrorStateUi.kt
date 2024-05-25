@@ -6,10 +6,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.gomaa.design_system.EmptyStateFullPage
+import com.gomaa.design_system.Illustrations
 import com.gomaa.nytimesarticles.R
 import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.ErrorStateUiConstants.ERROR_STATE_TEST_TAG
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.EmptyStateFullPage
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Illustrations
 
 @Composable
 internal fun ErrorStateUi(modifier: Modifier = Modifier, ctaButtonOnClick: (() -> Unit)? = null) {

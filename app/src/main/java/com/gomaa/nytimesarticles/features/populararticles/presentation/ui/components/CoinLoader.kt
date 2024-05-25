@@ -8,8 +8,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import com.gomaa.design_system.Loader
 import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.CoinLoaderConstants.COIN_LOADER_TEST_TAG
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.Loader
 
 @Composable
 internal fun CoinLoader(modifier: Modifier = Modifier) {

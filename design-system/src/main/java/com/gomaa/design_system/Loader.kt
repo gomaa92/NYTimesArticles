@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
+package com.gomaa.design_system
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -17,7 +17,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import com.gomaa.nytimesarticles.R
 
 /**
  * Loader is one of the elements for user engagement and feedback.

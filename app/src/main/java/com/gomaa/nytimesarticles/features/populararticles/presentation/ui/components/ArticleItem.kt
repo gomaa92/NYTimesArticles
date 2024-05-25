@@ -26,11 +26,11 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import com.gomaa.design_system.NYText
+import com.gomaa.design_system.NYTextStyle
 import com.gomaa.nytimesarticles.R
 import com.gomaa.nytimesarticles.features.populararticles.presentation.model.ArticleUiEntity
 import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.ArticlesListConstants.ARTICLES_LIST_TEST_TAG
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.NYText
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.NYTextStyle
 
 @Composable
 fun ArticlesList(

@@ -3,7 +3,7 @@ package com.gomaa.nytimesarticles.ui.designsysytem
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.EmptyStateFullPage
+import com.gomaa.design_system.EmptyStateFullPage
 import org.junit.Rule
 import org.junit.Test
 
@@ -14,7 +14,10 @@ class EmptyStateFullPageTest {
     @Test
     fun verifyEmptyStateFullPageIsDisplayed() {
         composeTestRule.setContent {
-            EmptyStateFullPage(headerText = "header", descriptionText = "description")
+            com.gomaa.design_system.EmptyStateFullPage(
+                headerText = "header",
+                descriptionText = "description"
+            )
 
         }
         composeTestRule.onNodeWithText("header").assertIsDisplayed()

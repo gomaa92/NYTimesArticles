@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "NYTimesArticles"
 include(":app")
 include(":core")
- 
+include(":design-system")

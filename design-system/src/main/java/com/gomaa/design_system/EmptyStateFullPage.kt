@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
+package com.gomaa.design_system
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

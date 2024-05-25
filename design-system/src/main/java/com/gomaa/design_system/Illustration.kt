@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem
+package com.gomaa.design_system
 
 import androidx.compose.material3.Icon as MaterialIcon
 import androidx.compose.runtime.Composable
