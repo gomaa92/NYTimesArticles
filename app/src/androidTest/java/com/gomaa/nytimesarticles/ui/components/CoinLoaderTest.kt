@@ -3,8 +3,8 @@ package com.gomaa.nytimesarticles.ui.components
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.CoinLoader
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.CoinLoaderConstants.COIN_LOADER_TEST_TAG
+import com.gomaa.nyarticles.presentation.ui.components.CoinLoader
+import com.gomaa.nyarticles.presentation.ui.components.CoinLoaderConstants.COIN_LOADER_TEST_TAG
 import org.junit.Rule
 import org.junit.Test
 

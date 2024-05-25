@@ -17,3 +17,5 @@ rootProject.name = "NYTimesArticles"
 include(":app")
 include(":core")
 include(":design-system")
+include(":features:nyarticles")
+include(":utils")

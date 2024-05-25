@@ -74,6 +74,8 @@ android {
 dependencies {
     implementation(project(":core"))
     implementation(project(":design-system"))
+    implementation(project(":utils"))
+    implementation(project(":features:nyarticles"))
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
     implementation("androidx.activity:activity-compose:1.9.0")

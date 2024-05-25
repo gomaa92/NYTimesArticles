@@ -1,6 +1,8 @@
 package com.gomaa.nytimesarticles.features.populararticles.presentation.utils
 
 import android.content.Context
+import com.gomaa.utils.UriParser
+import com.gomaa.utils.openInBrowser
 import org.junit.Test
 import org.mockito.Mockito
 

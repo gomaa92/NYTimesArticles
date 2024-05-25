@@ -2,8 +2,8 @@ package com.gomaa.nytimesarticles.features.populararticles.presentation.viewmode
 
 import com.gomaa.core.remote.RemoteError
 import com.gomaa.core.remote.Resource
-import com.gomaa.nytimesarticles.features.populararticles.data.model.Article
-import com.gomaa.nytimesarticles.features.populararticles.data.model.ArticlesResponse
+import com.gomaa.nyarticles.data.model.Article
+import com.gomaa.nyarticles.data.model.ArticlesResponse
 import com.gomaa.nytimesarticles.features.populararticles.domain.usecase.FetchPopularArticlesUseCase
 import com.gomaa.nytimesarticles.features.populararticles.presentation.mapper.ArticlesUIMapper.mapDataArticlesToUiArticles
 import com.gomaa.nytimesarticles.features.populararticles.presentation.model.ArticleUiEntity
@@ -48,7 +48,7 @@ class PopularArticlesViewModelTest {
     fun `fetchPopularArticles success`() = testCoroutineScope.runTest {
         // Given
         val articles = listOf(
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "2024-05-30",
@@ -62,7 +62,7 @@ class PopularArticlesViewModelTest {
                 url = "url",
                 byline = "byline"
             ),
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "2024-05-30",
@@ -79,7 +79,7 @@ class PopularArticlesViewModelTest {
         )
         whenever(useCase.execute(any())).thenReturn(
             Resource.Success(
-                ArticlesResponse(
+                com.gomaa.nyarticles.data.model.ArticlesResponse(
                     articles = articles,
                     numResults = 1,
                     status = "1"
@@ -101,7 +101,7 @@ class PopularArticlesViewModelTest {
     @Test
     fun `fetchPopularArticles error`() = testCoroutineScope.runTest {
         val articles = listOf(
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "2024-05-30",
@@ -115,7 +115,7 @@ class PopularArticlesViewModelTest {
                 url = "url",
                 byline = "byline"
             ),
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "2024-05-30",
@@ -133,7 +133,7 @@ class PopularArticlesViewModelTest {
         // Given
         whenever(useCase.execute(any())).thenReturn(
             Resource.Error(
-                remoteError = RemoteError.GeneralError, data = ArticlesResponse(
+                remoteError = RemoteError.GeneralError, data = com.gomaa.nyarticles.data.model.ArticlesResponse(
                     articles = articles,
                     numResults = 1,
                     status = "1"
@@ -157,7 +157,7 @@ class PopularArticlesViewModelTest {
         // Given
         whenever(useCase.execute(any())).thenReturn(
             Resource.Success(
-                ArticlesResponse(
+                com.gomaa.nyarticles.data.model.ArticlesResponse(
                     articles = emptyList(), numResults = 1,
                     status = "1"
                 )

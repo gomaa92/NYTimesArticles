@@ -5,10 +5,10 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
-import com.gomaa.nytimesarticles.features.populararticles.presentation.model.ArticleUiEntity
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.ArticleItem
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.ArticlesList
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.ArticlesListConstants.ARTICLES_LIST_TEST_TAG
+import com.gomaa.nyarticles.presentation.model.ArticleUiEntity
+import com.gomaa.nyarticles.presentation.ui.components.ArticleItem
+import com.gomaa.nyarticles.presentation.ui.components.ArticlesList
+import com.gomaa.nyarticles.presentation.ui.components.ArticlesListConstants.ARTICLES_LIST_TEST_TAG
 import org.junit.Rule
 import org.junit.Test
 

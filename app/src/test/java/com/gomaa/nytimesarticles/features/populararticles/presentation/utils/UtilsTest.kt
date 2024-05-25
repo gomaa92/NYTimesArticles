@@ -1,11 +1,9 @@
 package com.gomaa.nytimesarticles.features.populararticles.presentation.utils
 
-import android.content.Context
+import com.gomaa.utils.initializeFilterOptions
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
-import org.mockito.Mockito.mock
-import org.mockito.Mockito.verify
 
 class UtilsTest {
 

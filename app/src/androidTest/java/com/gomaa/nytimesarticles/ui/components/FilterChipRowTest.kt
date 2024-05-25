@@ -3,9 +3,9 @@ package com.gomaa.nytimesarticles.ui.components
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.FilterChipRow
-import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.components.FilterComponentConstants
-import com.gomaa.nytimesarticles.features.populararticles.presentation.utils.initializeFilterOptions
+import com.gomaa.nyarticles.presentation.ui.components.FilterChipRow
+import com.gomaa.nyarticles.presentation.ui.components.FilterComponentConstants
+import com.gomaa.utils.initializeFilterOptions
 import org.junit.Rule
 import org.junit.Test
 

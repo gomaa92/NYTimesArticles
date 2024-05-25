@@ -2,8 +2,8 @@ package com.gomaa.nytimesarticles.features.populararticles.domain
 
 import com.gomaa.core.remote.RemoteError
 import com.gomaa.core.remote.Resource
-import com.gomaa.nytimesarticles.features.populararticles.data.model.Article
-import com.gomaa.nytimesarticles.features.populararticles.data.model.ArticlesResponse
+import com.gomaa.nyarticles.data.model.Article
+import com.gomaa.nyarticles.data.model.ArticlesResponse
 import com.gomaa.nytimesarticles.features.populararticles.domain.repository.PopularArticlesRepository
 import com.gomaa.nytimesarticles.features.populararticles.domain.usecase.FetchPopularArticlesUseCase
 import kotlinx.coroutines.runBlocking
@@ -30,7 +30,7 @@ class FetchPopularArticlesUseCaseTest {
     fun `fetch popular articles success`() = runBlocking {
         val period = 7
         val articles = listOf(
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "date",
@@ -44,7 +44,7 @@ class FetchPopularArticlesUseCaseTest {
                 url = "url",
                 byline = "byline"
             ),
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "date",
@@ -61,7 +61,13 @@ class FetchPopularArticlesUseCaseTest {
         )
 
         val successResource =
-            Resource.Success(ArticlesResponse(articles = articles, numResults = 1, status = "12"))
+            Resource.Success(
+                com.gomaa.nyarticles.data.model.ArticlesResponse(
+                    articles = articles,
+                    numResults = 1,
+                    status = "12"
+                )
+            )
 
         // Mock repository method
         `when`(repository.fetchPopularArticles(period)).thenReturn(successResource)
@@ -77,7 +83,7 @@ class FetchPopularArticlesUseCaseTest {
     fun `fetch popular articles error`() = runBlocking {
         val period = 7
         val articles = listOf(
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "date",
@@ -91,7 +97,7 @@ class FetchPopularArticlesUseCaseTest {
                 url = "url",
                 byline = "byline"
             ),
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "date",
@@ -110,7 +116,11 @@ class FetchPopularArticlesUseCaseTest {
         val errorResource = Resource.Error(
             remoteError,
             code = 404,
-            data = ArticlesResponse(articles = articles, numResults = 1, status = "12")
+            data = com.gomaa.nyarticles.data.model.ArticlesResponse(
+                articles = articles,
+                numResults = 1,
+                status = "12"
+            )
         )
 
         // Mock repository method

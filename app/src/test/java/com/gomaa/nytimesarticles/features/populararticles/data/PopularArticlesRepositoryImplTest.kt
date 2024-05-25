@@ -2,10 +2,10 @@ package com.gomaa.nytimesarticles.features.populararticles.data
 
 import com.gomaa.core.remote.RemoteError
 import com.gomaa.core.remote.Resource
-import com.gomaa.nytimesarticles.features.populararticles.data.model.Article
-import com.gomaa.nytimesarticles.features.populararticles.data.model.ArticlesResponse
-import com.gomaa.nytimesarticles.features.populararticles.data.model.Media
-import com.gomaa.nytimesarticles.features.populararticles.data.model.MediaMetadata
+import com.gomaa.nyarticles.data.model.Article
+import com.gomaa.nyarticles.data.model.ArticlesResponse
+import com.gomaa.nyarticles.data.model.Media
+import com.gomaa.nyarticles.data.model.MediaMetadata
 import com.gomaa.nytimesarticles.features.populararticles.data.repository.PopularArticlesRepositoryImpl
 import com.gomaa.nytimesarticles.features.populararticles.data.service.MostPopularArticlesService
 import com.gomaa.nytimesarticles.features.populararticles.domain.repository.PopularArticlesRepository
@@ -38,10 +38,10 @@ class PopularArticlesRepositoryImplTest {
     @Test
     fun getArticleListReturnSuccess() {
         runBlocking {
-            val response = ArticlesResponse(
+            val response = com.gomaa.nyarticles.data.model.ArticlesResponse(
                 numResults = 1,
                 articles = listOf(
-                    Article(
+                    com.gomaa.nyarticles.data.model.Article(
                         id = 1,
                         publishedDate = "text",
                         section = "text",
@@ -54,13 +54,13 @@ class PopularArticlesRepositoryImplTest {
                         uri = "text",
                         byline = "text",
                         media = listOf(
-                            Media(
+                            com.gomaa.nyarticles.data.model.Media(
                                 caption = "text",
                                 copyright = "text",
                                 subtype = "text",
                                 type = "text",
                                 mediaMetadata = listOf(
-                                    MediaMetadata(
+                                    com.gomaa.nyarticles.data.model.MediaMetadata(
                                         format = "text",
                                         height = 1,
                                         width = 1,
@@ -99,7 +99,7 @@ class PopularArticlesRepositoryImplTest {
     @Test
     fun getArticleListReturnServerError() {
         runBlocking {
-            val errorResponse = Response.error<ArticlesResponse>(
+            val errorResponse = Response.error<com.gomaa.nyarticles.data.model.ArticlesResponse>(
                 404,
                 okhttp3.ResponseBody.create(null, "Not Found")
             )

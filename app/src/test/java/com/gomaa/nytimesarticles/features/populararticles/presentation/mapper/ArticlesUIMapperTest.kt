@@ -1,6 +1,6 @@
 package com.gomaa.nytimesarticles.features.populararticles.presentation.mapper
 
-import com.gomaa.nytimesarticles.features.populararticles.data.model.Article
+import com.gomaa.nyarticles.data.model.Article
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -17,7 +17,7 @@ class ArticlesUIMapperTest {
     fun `mapDataArticlesToUiArticles maps data articles to UI articles`() {
         // Given
         val articles = listOf(
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 1,
                 media = null,
                 publishedDate = "2024-05-24", // Assuming a date for testing
@@ -31,7 +31,7 @@ class ArticlesUIMapperTest {
                 url = "url1",
                 byline = "Byline 1"
             ),
-            Article(
+            com.gomaa.nyarticles.data.model.Article(
                 id = 2,
                 media = null,
                 publishedDate = "2024-05-23", // Assuming a date for testing
