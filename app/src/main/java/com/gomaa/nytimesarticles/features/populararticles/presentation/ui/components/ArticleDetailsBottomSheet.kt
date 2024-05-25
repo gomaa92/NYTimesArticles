@@ -20,7 +20,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -31,8 +30,8 @@ import coil.compose.rememberAsyncImagePainter
 import com.gomaa.nytimesarticles.R
 import com.gomaa.nytimesarticles.features.populararticles.presentation.model.ArticleUiEntity
 import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.NYText
-import com.gomaa.nytimesarticles.features.populararticles.presentation.utils.openInBrowser
 import com.gomaa.nytimesarticles.features.populararticles.presentation.ui.designsystem.NYTextStyle
+import com.gomaa.nytimesarticles.features.populararticles.presentation.utils.openInBrowser
 
 @Composable
 fun ArticleDetailBottomSheet(article: ArticleUiEntity, onCloseClicked: (() -> Unit)) {
@@ -51,7 +50,7 @@ fun ArticleDetailBottomSheet(article: ArticleUiEntity, onCloseClicked: (() -> Un
                 contentDescription = stringResource(
                     id = R.string.close
                 ),
-                tint = Color.Gray,
+                tint = MaterialTheme.colorScheme.primary,
                 modifier = Modifier
                     .padding(bottom = 12.dp)
                     .clickable {
@@ -74,19 +73,22 @@ fun ArticleDetailBottomSheet(article: ArticleUiEntity, onCloseClicked: (() -> Un
             text = article.title,
             nyTextStyle = NYTextStyle.Title,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(12.dp)
+            modifier = Modifier.padding(12.dp),
+            color = MaterialTheme.colorScheme.primary
         )
         NYText(
             text = article.byLine,
             nyTextStyle = NYTextStyle.BodySmall,
             textAlign = TextAlign.Start,
-            modifier = Modifier.padding(12.dp)
+            modifier = Modifier.padding(12.dp),
+            color = MaterialTheme.colorScheme.inverseSurface
         )
         NYText(
             text = stringResource(id = R.string.published, article.publishedAgo),
             nyTextStyle = NYTextStyle.BodySmall,
             textAlign = TextAlign.Start,
-            modifier = Modifier.padding(12.dp)
+            modifier = Modifier.padding(12.dp),
+            color = MaterialTheme.colorScheme.inverseSurface
         )
 
         Box(
@@ -107,13 +109,15 @@ fun ArticleDetailBottomSheet(article: ArticleUiEntity, onCloseClicked: (() -> Un
                     contentDescription = stringResource(
                         id = R.string.open_in_browser
                     ),
-                    modifier = Modifier.padding(start = 12.dp, end = 8.dp)
+                    modifier = Modifier.padding(start = 12.dp, end = 8.dp),
+                    tint = MaterialTheme.colorScheme.primary
                 )
                 NYText(
                     text = stringResource(id = R.string.open_in_browser),
                     nyTextStyle = NYTextStyle.LabelSmall,
                     textAlign = TextAlign.Start,
-                    modifier = Modifier.padding(12.dp)
+                    modifier = Modifier.padding(12.dp),
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
         }

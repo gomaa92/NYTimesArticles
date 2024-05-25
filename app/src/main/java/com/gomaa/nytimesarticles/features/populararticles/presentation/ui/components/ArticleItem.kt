@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -70,10 +71,13 @@ fun ArticleItem(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
+                        .aspectRatio(1.4f)
                         .background(
                             brush = Brush.verticalGradient(
                                 colors = listOf(
-                                    Color.Transparent, Color.Black.copy(alpha = 0.4f)
+                                    Color.Transparent,
+                                    Color.Black.copy(alpha = 0.1f),
+                                    Color.Black.copy(alpha = 0.35f),
                                 ), startY = 0f, endY = 100f
                             )
                         )
@@ -82,6 +86,7 @@ fun ArticleItem(
                     NYText(
                         text = item.title,
                         nyTextStyle = NYTextStyle.BodySmall,
+                        color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier
                             .align(Alignment.BottomStart)
                             .padding(horizontal = 8.dp, vertical = 4.dp)
