@@ -136,7 +136,7 @@ class PopularArticlesViewModelTest {
         whenever(useCase.execute(any())).thenReturn(
             Resource.Error(
                 remoteError = RemoteError.GeneralError,
-                data = com.gomaa.nyarticles.data.model.ArticlesResponse(
+                data = ArticlesResponse(
                     articles = articles,
                     numResults = 1,
                     status = "1"

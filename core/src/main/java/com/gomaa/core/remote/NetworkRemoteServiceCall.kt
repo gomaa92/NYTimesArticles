@@ -1,6 +1,5 @@
 package com.gomaa.core.remote
 
-import android.accounts.NetworkErrorException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
