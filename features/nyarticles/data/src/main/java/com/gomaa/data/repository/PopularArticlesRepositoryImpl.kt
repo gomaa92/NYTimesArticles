@@ -1,10 +1,9 @@
-package com.gomaa.nyarticles.data.repository
+package com.gomaa.data.repository
 
 import com.gomaa.core.remote.NetworkRemoteServiceCall
 import com.gomaa.core.remote.Resource
-import com.gomaa.nyarticles.data.model.ArticlesResponse
-import com.gomaa.nyarticles.data.service.MostPopularArticlesService
-import com.gomaa.nyarticles.domain.repository.PopularArticlesRepository
+import com.gomaa.data.model.ArticlesResponse
+import com.gomaa.data.service.MostPopularArticlesService
 
 import javax.inject.Inject
 

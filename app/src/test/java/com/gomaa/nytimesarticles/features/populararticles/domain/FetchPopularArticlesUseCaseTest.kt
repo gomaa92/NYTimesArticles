@@ -2,8 +2,8 @@ package com.gomaa.nytimesarticles.features.populararticles.domain
 
 import com.gomaa.core.remote.RemoteError
 import com.gomaa.core.remote.Resource
-import com.gomaa.nyarticles.data.model.Article
-import com.gomaa.nyarticles.domain.repository.PopularArticlesRepository
+import com.gomaa.data.model.Article
+import com.gomaa.data.repository.PopularArticlesRepository
 import com.gomaa.nyarticles.domain.usecase.FetchPopularArticlesUseCase
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
@@ -61,7 +61,7 @@ class FetchPopularArticlesUseCaseTest {
 
         val successResource =
             Resource.Success(
-                com.gomaa.nyarticles.data.model.ArticlesResponse(
+                com.gomaa.data.model.ArticlesResponse(
                     articles = articles,
                     numResults = 1,
                     status = "12"
@@ -115,7 +115,7 @@ class FetchPopularArticlesUseCaseTest {
         val errorResource = Resource.Error(
             remoteError,
             code = 404,
-            data = com.gomaa.nyarticles.data.model.ArticlesResponse(
+            data = com.gomaa.data.model.ArticlesResponse(
                 articles = articles,
                 numResults = 1,
                 status = "12"

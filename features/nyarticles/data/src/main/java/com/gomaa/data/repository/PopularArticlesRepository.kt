@@ -1,7 +1,7 @@
-package com.gomaa.nyarticles.domain.repository
+package com.gomaa.data.repository
 
 import com.gomaa.core.remote.Resource
-import com.gomaa.nyarticles.data.model.ArticlesResponse
+import com.gomaa.data.model.ArticlesResponse
 
 interface PopularArticlesRepository {
     suspend fun fetchPopularArticles(period: Int): Resource<ArticlesResponse>

@@ -1,14 +1,14 @@
-package com.gomaa.nytimesarticles.features.populararticles.data
+package com.gomaa.data
 
 import com.gomaa.core.remote.RemoteError
 import com.gomaa.core.remote.Resource
-import com.gomaa.nyarticles.data.model.Article
-import com.gomaa.nyarticles.data.model.ArticlesResponse
-import com.gomaa.nyarticles.data.model.Media
-import com.gomaa.nyarticles.data.model.MediaMetadata
-import com.gomaa.nyarticles.data.repository.PopularArticlesRepositoryImpl
-import com.gomaa.nyarticles.data.service.MostPopularArticlesService
-import com.gomaa.nyarticles.domain.repository.PopularArticlesRepository
+import com.gomaa.data.model.Article
+import com.gomaa.data.model.ArticlesResponse
+import com.gomaa.data.model.Media
+import com.gomaa.data.model.MediaMetadata
+import com.gomaa.data.repository.PopularArticlesRepositoryImpl
+import com.gomaa.data.service.MostPopularArticlesService
+import com.gomaa.data.repository.PopularArticlesRepository
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert
 import org.junit.Before

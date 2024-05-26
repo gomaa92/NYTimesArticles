@@ -1,4 +1,4 @@
-package com.gomaa.nyarticles.data.model
+package com.gomaa.data.model
 
 data class MediaMetadata(
     val format: String?,

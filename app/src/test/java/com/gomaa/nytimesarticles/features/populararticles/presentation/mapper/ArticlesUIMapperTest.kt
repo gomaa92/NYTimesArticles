@@ -1,6 +1,6 @@
 package com.gomaa.nytimesarticles.features.populararticles.presentation.mapper
 
-import com.gomaa.nyarticles.data.model.Article
+import com.gomaa.data.model.Article
 import com.gomaa.nyarticles.presentation.mapper.ArticlesUIMapper
 import org.junit.Assert.assertEquals
 import org.junit.Before

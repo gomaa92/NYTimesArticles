@@ -1,6 +1,6 @@
 package com.gomaa.nyarticles.presentation.mapper
 
-import com.gomaa.nyarticles.data.model.Article
+import com.gomaa.data.model.Article
 import com.gomaa.nyarticles.presentation.model.ArticleUiEntity
 import org.jetbrains.annotations.VisibleForTesting
 import java.time.Clock

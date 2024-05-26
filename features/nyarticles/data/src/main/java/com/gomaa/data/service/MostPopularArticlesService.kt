@@ -1,7 +1,8 @@
-package com.gomaa.nyarticles.data.service
+package com.gomaa.data.service
 
+import com.gomaa.data.BuildConfig
 import com.gomaa.core.remote.EndPointConfig.FETCH_POPULAR_ARTICLES
-import com.gomaa.nyarticles.BuildConfig
+import com.gomaa.data.model.ArticlesResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -11,5 +12,5 @@ interface MostPopularArticlesService {
     suspend fun getMostPopularArticles(
         @Path("period") period: Int,
         @Query("api-key") apiKey: String = BuildConfig.API_KEY
-    ): com.gomaa.nyarticles.data.model.ArticlesResponse
+    ): ArticlesResponse
 }

@@ -1,6 +1,6 @@
-package com.gomaa.nyarticles.di
+package com.gomaa.data.di
 
-import com.gomaa.nyarticles.data.service.MostPopularArticlesService
+import com.gomaa.data.service.MostPopularArticlesService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

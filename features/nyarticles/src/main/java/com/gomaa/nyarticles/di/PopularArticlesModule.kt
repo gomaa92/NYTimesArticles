@@ -1,7 +1,7 @@
 package com.gomaa.nyarticles.di
 
-import com.gomaa.nyarticles.data.repository.PopularArticlesRepositoryImpl
-import com.gomaa.nyarticles.domain.repository.PopularArticlesRepository
+import com.gomaa.data.repository.PopularArticlesRepositoryImpl
+import com.gomaa.data.repository.PopularArticlesRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.gomaa.nyarticles.data.model
+package com.gomaa.data.model
 
 import com.google.gson.annotations.SerializedName
 
