@@ -4,7 +4,7 @@ import com.gomaa.core.remote.RemoteError
 import com.gomaa.core.remote.Resource
 import com.gomaa.data.model.Article
 import com.gomaa.data.model.ArticlesResponse
-import com.gomaa.nyarticles.domain.usecase.FetchPopularArticlesUseCase
+import com.gomaa.domain.usecase.FetchPopularArticlesUseCase
 import com.gomaa.nyarticles.presentation.mapper.ArticlesUIMapper.mapDataArticlesToUiArticles
 import com.gomaa.nyarticles.presentation.model.ArticleUiEntity
 import com.gomaa.nyarticles.presentation.viewmodel.PopularArticlesEvent
@@ -103,7 +103,7 @@ class PopularArticlesViewModelTest {
     @Test
     fun `fetchPopularArticles error`() = testCoroutineScope.runTest {
         val articles = listOf(
-           Article(
+            Article(
                 id = 1,
                 media = null,
                 publishedDate = "2024-05-30",
@@ -117,7 +117,7 @@ class PopularArticlesViewModelTest {
                 url = "url",
                 byline = "byline"
             ),
-           Article(
+            Article(
                 id = 1,
                 media = null,
                 publishedDate = "2024-05-30",
@@ -161,7 +161,7 @@ class PopularArticlesViewModelTest {
         // Given
         whenever(useCase.execute(any())).thenReturn(
             Resource.Success(
-               ArticlesResponse(
+                ArticlesResponse(
                     articles = emptyList(), numResults = 1,
                     status = "1"
                 )

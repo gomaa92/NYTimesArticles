@@ -1,9 +1,9 @@
 package com.gomaa.nyarticles.presentation.viewmodel
 
-import com.gomaa.core.remote.Resource
 import com.gomaa.core.presentation.BaseViewModel
 import com.gomaa.core.presentation.UiEffect
-import com.gomaa.nyarticles.domain.usecase.FetchPopularArticlesUseCase
+import com.gomaa.core.remote.Resource
+import com.gomaa.domain.usecase.FetchPopularArticlesUseCase
 import com.gomaa.nyarticles.presentation.mapper.ArticlesUIMapper.mapDataArticlesToUiArticles
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

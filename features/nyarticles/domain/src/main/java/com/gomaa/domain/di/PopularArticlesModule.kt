@@ -1,4 +1,4 @@
-package com.gomaa.nyarticles.di
+package com.gomaa.domain.di
 
 import com.gomaa.data.repository.PopularArticlesRepositoryImpl
 import com.gomaa.data.repository.PopularArticlesRepository

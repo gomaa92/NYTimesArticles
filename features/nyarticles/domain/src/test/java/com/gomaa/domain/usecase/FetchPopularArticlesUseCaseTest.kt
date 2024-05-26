@@ -1,10 +1,9 @@
-package com.gomaa.nytimesarticles.features.populararticles.domain
+package com.gomaa.domain.usecase
 
 import com.gomaa.core.remote.RemoteError
 import com.gomaa.core.remote.Resource
 import com.gomaa.data.model.Article
 import com.gomaa.data.repository.PopularArticlesRepository
-import com.gomaa.nyarticles.domain.usecase.FetchPopularArticlesUseCase
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Before

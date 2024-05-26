@@ -1,4 +1,4 @@
-package com.gomaa.nyarticles.domain.usecase
+package com.gomaa.domain.usecase
 
 import com.gomaa.core.remote.Resource
 import com.gomaa.core.usecase.SuspendableUseCase
