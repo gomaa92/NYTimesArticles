@@ -15,4 +15,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "NYTimesArticles"
 include(":app")
- 
+include(":core")
+include(":design-system")
+include(":features:nyarticles")
+include(":utils")
+include(":features:nyarticles:data")
+include(":features:nyarticles:domain")
+include(":features:nyarticles:presentation")
