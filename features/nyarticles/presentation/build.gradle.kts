@@ -41,6 +41,12 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
+    configurations.all {
+        resolutionStrategy {
+            force("androidx.test.ext:junit:1.1.3")
+            force("androidx.test.espresso:espresso-core:3.4.0")
+        }
+    }
 }
 
 dependencies {

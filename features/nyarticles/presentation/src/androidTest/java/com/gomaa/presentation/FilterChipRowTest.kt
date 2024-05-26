@@ -1,4 +1,4 @@
-package com.gomaa.nytimesarticles.ui.components
+package com.gomaa.presentation
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule

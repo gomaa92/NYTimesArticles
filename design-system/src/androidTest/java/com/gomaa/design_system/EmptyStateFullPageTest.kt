@@ -1,9 +1,8 @@
-package com.gomaa.nytimesarticles.ui.designsysytem
+package com.gomaa.design_system
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import com.gomaa.design_system.EmptyStateFullPage
 import org.junit.Rule
 import org.junit.Test
 
@@ -18,10 +17,8 @@ class EmptyStateFullPageTest {
                 headerText = "header",
                 descriptionText = "description"
             )
-
         }
         composeTestRule.onNodeWithText("header").assertIsDisplayed()
         composeTestRule.onNodeWithText("description").assertIsDisplayed()
-
     }
 }

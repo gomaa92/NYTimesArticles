@@ -1,10 +1,8 @@
-package com.gomaa.nytimesarticles.ui.designsysytem
+package com.gomaa.design_system
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
-import com.gomaa.design_system.Illustration
-import com.gomaa.design_system.Illustrations
 import org.junit.Rule
 import org.junit.Test
 
@@ -20,9 +18,7 @@ class IllustrationTest {
                 illustration = Illustrations.Error,
                 contentDescription = "contentDes"
             )
-
         }
         composeTestRule.onNodeWithContentDescription("contentDes").assertIsDisplayed()
-
     }
 }
