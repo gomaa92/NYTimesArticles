@@ -15,7 +15,8 @@ also user able to browse articles on the brwoser, also you can fetch articles fo
 - ### Jnit - For Unite test
 - ### Mockito - mocking framework
 - ### Espresso - UI Tests
-- ##Architecture
+
+- ## Architecture
   * MVI Architecture
   * Modularization by Feature combined with Layer
   * Repository pattern
