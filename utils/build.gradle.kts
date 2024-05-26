@@ -33,4 +33,7 @@ android {
 }
 
 dependencies {
+    testImplementation("junit:junit:4.13.2")
+    implementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+    implementation("org.mockito:mockito-core:4.0.0")
 }

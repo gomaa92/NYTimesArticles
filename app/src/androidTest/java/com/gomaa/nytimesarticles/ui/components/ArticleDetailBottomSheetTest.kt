@@ -4,8 +4,8 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
-import com.gomaa.nyarticles.presentation.model.ArticleUiEntity
-import com.gomaa.nyarticles.presentation.ui.components.ArticleDetailBottomSheet
+import com.gomaa.presentation.model.ArticleUiEntity
+import com.gomaa.presentation.ui.components.ArticleDetailBottomSheet
 import org.junit.Rule
 import org.junit.Test
 
@@ -26,7 +26,7 @@ class ArticleDetailBottomSheetTest {
             publishedAgo = "2"
         )
         composeTestRule.setContent {
-            ArticleDetailBottomSheet(article = article) {}
+           ArticleDetailBottomSheet(article = article) {}
         }
         composeTestRule.onNodeWithContentDescription("articleImage").assertIsDisplayed()
         composeTestRule.onNodeWithContentDescription("close").assertIsDisplayed()

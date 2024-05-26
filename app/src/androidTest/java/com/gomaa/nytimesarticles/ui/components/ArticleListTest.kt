@@ -5,10 +5,10 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
-import com.gomaa.nyarticles.presentation.model.ArticleUiEntity
-import com.gomaa.nyarticles.presentation.ui.components.ArticleItem
-import com.gomaa.nyarticles.presentation.ui.components.ArticlesList
-import com.gomaa.nyarticles.presentation.ui.components.ArticlesListConstants.ARTICLES_LIST_TEST_TAG
+import com.gomaa.presentation.model.ArticleUiEntity
+import com.gomaa.presentation.ui.components.ArticleItem
+import com.gomaa.presentation.ui.components.ArticlesList
+import com.gomaa.presentation.ui.components.ArticlesListConstants.ARTICLES_LIST_TEST_TAG
 import org.junit.Rule
 import org.junit.Test
 
@@ -20,7 +20,7 @@ class ArticleListTest {
     @Test
     fun verifyArticlesListIsDisplayed() {
         val articles = listOf(
-            ArticleUiEntity(
+           ArticleUiEntity(
                 title = "title",
                 publishedDate = "date",
                 byLine = "author",
@@ -33,8 +33,7 @@ class ArticleListTest {
         )
 
         composeTestRule.setContent {
-            ArticlesList(articles = articles, onItemClick = {})
-
+           ArticlesList(articles = articles, onItemClick = {})
         }
         composeTestRule.onNodeWithTag(
             ARTICLES_LIST_TEST_TAG,
@@ -57,7 +56,6 @@ class ArticleListTest {
 
         composeTestRule.setContent {
             ArticleItem(item = article, onItemClick = {})
-
         }
         composeTestRule.onNodeWithContentDescription("articleImage").assertIsDisplayed()
         composeTestRule.onNodeWithText("title").assertIsDisplayed()

@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.gomaa.nyarticles.presentation.ui.screens.PopularArticlesScreen
 import com.gomaa.nytimesarticles.ui.theme.NYTimesArticlesTheme
+import com.gomaa.presentation.ui.screens.PopularArticlesScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
