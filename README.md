@@ -5,16 +5,26 @@ also user able to browse articles on the brwoser, also you can fetch articles fo
 
 ## Built With
 - ### kotlin
-- ### Jetpack compose - Jetpack Compose is Android's recommended modern toolkit for building native UI
-- ### Coroutines - For asynchronous and more.
-- ### Flows - a flow is a type that can emit multiple values sequentially.
-- ### Viewmodel - Stores UI-related data that isn't destroyed on UI changes.
-- ### Hilt - Standard library to incorporate Dagger dependency injection into an Android application.
-- ### Retrofit - A type-safe HTTP client for Android and Java.
-- ### Coil - An image loading library for Android backed by Kotlin Coroutines.
-- ### Jnit - For Unite test
-- ### Mockito - mocking framework
-- ### Espresso - UI Tests
+- ### Jetpack compose 
+    * Jetpack Compose is Android's recommended modern toolkit for building native UI
+- ### Coroutines
+    * For asynchronous and more.
+- ### Flows
+    * a flow is a type that can emit multiple values sequentially.
+- ### Viewmodel -
+    * Stores UI-related data that isn't destroyed on UI changes.
+- ### Hilt -
+    * Standard library to incorporate Dagger dependency injection into an Android application.
+- ### Retrofit -
+    * A type-safe HTTP client for Android and Java.
+- ### Coil -
+    * An image loading library for Android backed by Kotlin Coroutines.
+- ### Jnit
+    * For Unite test
+- ### Mockito
+    * mocking framework
+- ### Espresso
+    * UI Tests
 
 - ## Architecture
   * MVI Architecture
