@@ -85,7 +85,7 @@ fun ArticleItem(
                 ) {
                     NYText(
                         text = item.title,
-                        nyTextStyle = NYTextStyle.BodySmall,
+                        nyTextStyle = NYTextStyle.LabelLarge,
                         color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier
                             .align(Alignment.BottomStart)
