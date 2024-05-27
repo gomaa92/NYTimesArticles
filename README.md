@@ -42,6 +42,18 @@ also user able to browse articles on the brwoser, also you can fetch articles fo
 - ### Features Module
      includes app featuers splitted by modules, and each feature splitted to 3 submodules (data, domain, presentation).
 
+### unit tests coverd:
+* Utils module
+* Features module
+   - Data module: repository(includes response models)
+   - Domain module: usecase
+   - Presntation module: viewmodel and Ui mapper
+     
+
+### Ui tests covered:
+* Design-system module: for the resuable combonents
+* Features module
+   - Presntation module: for the screens components 
 
 ## Video
 
