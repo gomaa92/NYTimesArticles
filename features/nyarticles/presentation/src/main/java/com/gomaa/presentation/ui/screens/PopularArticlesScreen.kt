@@ -2,6 +2,7 @@ package com.gomaa.presentation.ui.screens
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.VisibilityThreshold
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.expandVertically
@@ -74,13 +75,13 @@ fun PopularArticlesScreen(
                 visible = visibleState,
                 enter = expandVertically(
                     animationSpec = spring(
-                        stiffness = 150f,
+                        stiffness =  Spring.StiffnessMediumLow,
                         visibilityThreshold = IntSize.VisibilityThreshold
                     )
                 ),
                 exit = shrinkVertically(
                     animationSpec = spring(
-                        stiffness = 150f,
+                        stiffness =  Spring.StiffnessMediumLow,
                         visibilityThreshold = IntSize.VisibilityThreshold
                     )
                 )
