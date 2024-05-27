@@ -1,6 +1,11 @@
 package com.gomaa.presentation.ui.screens
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.VisibilityThreshold
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,6 +25,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.gomaa.presentation.model.ArticleUiEntity
@@ -31,7 +37,6 @@ import com.gomaa.presentation.ui.components.ErrorStateUi
 import com.gomaa.presentation.ui.components.FilterChipRow
 import com.gomaa.presentation.viewmodel.PopularArticlesEvent
 import com.gomaa.presentation.viewmodel.PopularArticlesViewModel
-
 import com.gomaa.utils.initializeFilterOptions
 import kotlinx.coroutines.launch
 
@@ -40,8 +45,7 @@ import kotlinx.coroutines.launch
 fun PopularArticlesScreen(
     viewModel: PopularArticlesViewModel = hiltViewModel()
 ) {
-    val scope = rememberCoroutineScope()
-    var filterOptions by remember { mutableStateOf(initializeFilterOptions()) }
+    val coroutineScope = rememberCoroutineScope()
     LaunchedEffect(true) {
         viewModel.dispatch(PopularArticlesEvent.FetchPopularArticles(1))
     }
@@ -50,28 +54,45 @@ fun PopularArticlesScreen(
     val isError = viewModel.uiState.collectAsState().value.isError
     val isEmptyState = viewModel.uiState.collectAsState().value.isEmptyResponse
 
+    var filterOptions by remember { mutableStateOf(initializeFilterOptions()) }
+    var selectedItem by remember { mutableStateOf<ArticleUiEntity?>(null) }
+    var visibleState by remember { mutableStateOf(false) }
+
     val scaffoldState = rememberBottomSheetScaffoldState(
         bottomSheetState = rememberStandardBottomSheetState(
             skipHiddenState = false
         )
     )
-    val coroutineScope = rememberCoroutineScope()
-    var selectedItem by remember { mutableStateOf<ArticleUiEntity?>(null) }
-
     BackHandler(enabled = scaffoldState.bottomSheetState.isVisible) {
-        coroutineScope.launch {
-            scaffoldState.bottomSheetState.hide()
-        }
+        visibleState = false
     }
+
     BottomSheetScaffold(
         scaffoldState = scaffoldState,
         sheetContent = {
-            selectedItem?.let {
-                ArticleDetailBottomSheet(article = it) {
-                    scope.launch { scaffoldState.bottomSheetState.hide() }
+            AnimatedVisibility(
+                visible = visibleState,
+                enter = expandVertically(
+                    animationSpec = spring(
+                        stiffness = 150f,
+                        visibilityThreshold = IntSize.VisibilityThreshold
+                    )
+                ),
+                exit = shrinkVertically(
+                    animationSpec = spring(
+                        stiffness = 150f,
+                        visibilityThreshold = IntSize.VisibilityThreshold
+                    )
+                )
+            ) {
+                selectedItem?.let {
+                    ArticleDetailBottomSheet(article = it) {
+                        visibleState = false
+                    }
                 }
             }
         },
+        sheetDragHandle = {},
         sheetPeekHeight = 0.dp
     ) {
         when {
@@ -96,11 +117,11 @@ fun PopularArticlesScreen(
                     ArticlesList(
                         articles = articles,
                     ) { item ->
+                        visibleState = true
                         selectedItem = item
                         coroutineScope.launch {
                             scaffoldState.bottomSheetState.expand()
                         }
-
                     }
                 }
             }
