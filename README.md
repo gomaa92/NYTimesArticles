@@ -43,6 +43,10 @@ also user able to browse articles on the brwoser, also you can fetch articles fo
      includes app featuers splitted by modules, and each feature splitted to 3 submodules (data, domain, presentation).
 
 
+## Video
 
+
+
+https://github.com/gomaa92/NYTimesArticles/assets/31782459/9af50aaf-b716-4925-a46a-132b3728d58f
 
 
